@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:text="Курс:" />
+
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/symbol"
+        android:layout_toRightOf="@id/label"
+        android:hint="0.55"
+        android:inputType="numberDecimal"
+        android:paddingRight="10dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/symbol"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/label_end"
+        android:hint="$"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/label_end"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="/ лв." />
+
+    <LinearLayout
+        android:id="@+id/container_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:hint="10"
+            android:inputType="numberDecimal"
+            android:paddingRight="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="лв." />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/container_result"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="Резултат:" />
+
+    <LinearLayout
+        android:id="@+id/container_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Сметни" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Занули" />
+
+    </LinearLayout>
+
+</RelativeLayout>
